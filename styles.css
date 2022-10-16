@@ -1,3 +1,4 @@
+/* stylelint-disable */
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -31,10 +32,6 @@ body {
     cursor: pointer;
 }
 
-.cell.x, .cell.circle {
-    cursor: not-allowed;
-}
-
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
@@ -55,20 +52,38 @@ body {
     border-bottom: none;
 }
 
+.cell.x, .cell.circle {
+    cursor: not-allowed;
+}
+
 .cell.x::before,
 .cell.x::after {
+    background-color: black;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    background-color: lightgrey;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after
+ {
     position: absolute;
     content: '';
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
-    background-color: black;
 }
 
-.cell.x::before {
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
     transform: rotate(45deg);
 }
 
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
     transform: rotate(-45deg);
 }
 
