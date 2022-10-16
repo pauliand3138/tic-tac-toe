@@ -28,6 +28,11 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
+}
+
+.cell.x, .cell.circle {
+    cursor: not-allowed;
 }
 
 .cell:first-child,
@@ -65,4 +70,23 @@ body {
 
 .cell.x::after {
     transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background-color: black;
+}
+
+.cell.circle::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+.cell.circle::after {
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+    background-color: white;
 }
