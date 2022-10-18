@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Tic Tac Toe</title>
+    <!-- Execute script after page is loaded -->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="board x" id="board">
-        <div class="cell x" data-cell></div>
-        <div class="cell circle" data-cell></div>
+    <div class="board" id="board">
+        <!-- data-cell: Custom HTML tag -->
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -21,7 +23,7 @@
         <div class="cell" data-cell></div>
     </div>
     <div class="winning-message" id="winning-message">
-        <div data-winning-message-text>X Wins!</div>
+        <div data-winning-message-text></div>
         <button id="restart-button">Restart</button>
     </div>
 </body>
