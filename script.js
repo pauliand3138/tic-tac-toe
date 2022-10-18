@@ -57,7 +57,9 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
+    // some => AT LEAST ONE combination among all 
     return WINNING_COMBINATIONS.some(combination => {
+        // every => ALL INDEXES in any combination
         return combination.every(index => {
             return cellElements[index].classList.contains(currentClass);
         })
