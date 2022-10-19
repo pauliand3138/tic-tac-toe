@@ -1,6 +1,8 @@
 /* stylelint-disable */
 *, *::after, *::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -9,17 +11,18 @@
 }
 
 body {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     background-color: #FCB1A6;
+    height: 100vh;
 }
 
 .board {
-    width: 100vw;
-    height: 100vh;
     display: grid;
     gap: 10px;
-    justify-content: center;
-    align-content: center;
     grid-template-columns: repeat(3, auto);
 }
 
