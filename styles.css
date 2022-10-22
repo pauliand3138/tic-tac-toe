@@ -21,6 +21,77 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.game-details {
+    background: #FFF9EC;
+    padding: 7px;
+    border-radius: 5px;
+    width: 320px;
+}
+
+.game-details .players {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.game-details span {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    color: #FCB1A6;
+    z-index: 5;
+}
+
+.game-details span {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    color: #FCB1A6;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.game-details span:first-child {
+    color: #FFF9EC;
+}
+
+.game-details .slider {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 50%;
+    background: #FCB1A6;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.players.active span:first-child {
+    color: #FCB1A6;
+}
+
+.players.active span:nth-child(2) {
+    color: #FFF9EC;
+}
+
+.players.active .slider {
+    left: 50%;
+}
+
 .board {
     display: grid;
     gap: 10px;
@@ -133,73 +204,48 @@ body {
     display: flex;
 }
 
-.game-details {
-    background: #FFF9EC;
-    padding: 7px;
-    border-radius: 5px;
-    width: 320px;
-}
-
-.game-details .players {
-    position: relative;
+  /* Footer Styles */
+.copyright {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.game-details span {
-    position: relative;
-    width: 100%;
-    border-radius: 5px;
-    padding: 7px 0;
-    font-size: 19px;
-    font-weight: 600;
-    cursor: default;
-    width: 100%;
-    text-align: center;
-    color: #FCB1A6;
-    z-index: 5;
-}
-
-.game-details span {
-    position: relative;
-    width: 100%;
-    border-radius: 5px;
-    padding: 7px 0;
-    font-size: 19px;
-    font-weight: 600;
-    cursor: default;
-    width: 100%;
-    text-align: center;
-    color: #FCB1A6;
-    z-index: 2;
-    transition: all 0.3s ease;
-}
-
-.game-details span:first-child {
-    color: #FFF9EC;
-}
-
-.game-details .slider {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
     position: absolute;
-    top: 0;
-    left: 0%;
-    height: 100%;
-    width: 50%;
-    background: #FCB1A6;
-    border-radius: 5px;
-    z-index: 1;
-    transition: all 0.3s ease;
+    left: 35px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: .5em;
+    width: 280px;
 }
 
-.players.active span:first-child {
-    color: #FCB1A6;
+.copyright-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
 }
 
-.players.active span:nth-child(2) {
-    color: #FFF9EC;
+.copyright a {
+    text-decoration: none;
+    color:  white;
 }
 
-.players.active .slider {
-    left: 50%;
+.author-name {
+    text-decoration: underline 0.1em rgba(87, 110, 224, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.author-name:hover {
+    text-decoration-color: white;
+}
+
+.github-icon {
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-icon:hover {
+    transform: rotate(360deg) scale(1.1);
 }
