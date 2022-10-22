@@ -19,7 +19,7 @@ header {
     justify-content: center;
     top: 30px;
     border: 10px solid white;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 header .app-title {
@@ -198,7 +198,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -208,22 +208,36 @@ body {
 }
 
 .winning-message button {
-    font-size: 3rem;
-    background-color: white;
-    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    background-color: #FB6376;
+    border: none;
+    color: #FFF9EC;
     padding: .25em .5em;
     cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .winning-message button:hover {
-    background-color: black;
-    border: 1px solid white;
-    color: white;
+    background-color: #D43F58;
+    color: #FFF9EC;
     cursor: pointer;
 }
 
 .winning-message.show {
     display: flex;
+}
+
+.winning-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFDCCC;
+    border: 10px solid #FCB1A6;
+    color: #5D2A42;
+    border-radius: 30px;
+    padding: 1em 2em;
 }
 
   /* Footer Styles */
