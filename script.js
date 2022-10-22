@@ -15,6 +15,7 @@ const board = document.getElementById('board');
 const winningMessagElement = document.getElementById("winning-message");
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]');
 const restartButton = document.getElementById('restart-button');
+const players = document.querySelector(".players");
 let circleTurn;
 
 startGame();
@@ -52,6 +53,11 @@ function placeMark(cell, currentClass) {
 
 function swapTurns() {
     circleTurn = !circleTurn;
+    if (circleTurn) {
+        players.setAttribute("class", "players active");
+    } else {
+        players.classList.remove("active");
+    }
 }
 
 function setBoardHoverClass() {

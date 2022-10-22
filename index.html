@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="styles.css">
     <title>Tic Tac Toe - Paul</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!-- Execute script after page is loaded -->
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="game-details">
         <div class="players">
-            <span class="x-turn">X's Move</span>
-            <span class="o-turn">O's Move</span>
+            <span class="x-turn">X's Turn</span>
+            <span class="o-turn">O's Turn</span>
+            <div class="slider"></div>
         </div>
     </div>
+    
     <div class="board" id="board">
         <!-- data-cell: Custom HTML tag -->
         <div class="cell" data-cell></div>

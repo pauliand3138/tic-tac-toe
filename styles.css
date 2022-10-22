@@ -18,6 +18,7 @@ body {
     gap: 30px;
     background-color: #FCB1A6;
     height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 
 .board {
@@ -38,29 +39,6 @@ body {
     cursor: pointer;
 }
 
-/*
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-    border-top: none;
-}
-
-.cell:nth-child(3n + 1) {
-    border-left: none;
-}
-
-.cell:nth-child(3n + 3) {
-    border-right: none;
-}
-*/
-/* .cell:last-child not working in live server */
-/*
-.cell:nth-child(9),
-.cell:nth-child(8),
-.cell:nth-child(7) {
-    border-bottom: none;
-}
-*/
 .cell.x, .cell.circle {
     cursor: not-allowed;
 }
@@ -133,6 +111,7 @@ body {
     align-items: center;
     color: white;
     font-size: 5rem;
+    z-index: 3;
 }
 
 .winning-message button {
@@ -152,4 +131,75 @@ body {
 
 .winning-message.show {
     display: flex;
+}
+
+.game-details {
+    background: #FFF9EC;
+    padding: 7px;
+    border-radius: 5px;
+    width: 320px;
+}
+
+.game-details .players {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.game-details span {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    color: #FCB1A6;
+    z-index: 5;
+}
+
+.game-details span {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    color: #FCB1A6;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.game-details span:first-child {
+    color: #FFF9EC;
+}
+
+.game-details .slider {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 50%;
+    background: #FCB1A6;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.players.active span:first-child {
+    color: #FCB1A6;
+}
+
+.players.active span:nth-child(2) {
+    color: #FFF9EC;
+}
+
+.players.active .slider {
+    left: 50%;
 }
