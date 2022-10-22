@@ -10,13 +10,35 @@
     --mark-size: calc(var(--cell-size) * .6);
 }
 
+header {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    border: 10px solid white;
+    border-radius: 5px
+}
+
+header .app-title {
+    font-size: 3.5em;
+    color: #fff;
+}
+
+header .app-icon {
+    width: 100px;
+    height: 100px;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-color: #FCB1A6;
+    background-image: url("images/animated-background.svg");
     height: 100vh;
     font-family: "Poppins", sans-serif;
 }
@@ -211,7 +233,7 @@ body {
     align-items: center;
     gap: 0.5em;
     position: absolute;
-    left: 35px;
+    left: 15px;
     right: 0;
     margin-left: auto;
     margin-right: auto;
@@ -221,7 +243,7 @@ body {
 
 .copyright-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.15em;
     text-align: center;
     color: white;
 }
